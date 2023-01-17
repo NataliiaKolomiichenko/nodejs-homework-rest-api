@@ -12,7 +12,7 @@ const resendVerifyEmail = async (req, res) => {
         throw HttpError(404);
     };
 
-    if (req.body === {}) {
+    if (email === '' || req.body === {}) {
         throw HttpError(400, 'Missing required field email');
     };
 

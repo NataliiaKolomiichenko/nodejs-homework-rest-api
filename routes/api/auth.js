@@ -9,7 +9,7 @@ router.post('/users/signup', validateBody(userJoiSchemas.schema), ctrlAuth.regis
 
 router.get('/users/verify/:verificationToken', ctrlAuth.verify);
 
-router.get('/users/verify/:verificationToken', validateBody(userJoiSchemas.emailSchema), ctrlAuth.resendVerifyEmail);
+router.post('/users/verify', validateBody(userJoiSchemas.emailSchema), ctrlAuth.resendVerifyEmail);
 
 router.post('/users/login', validateBody(userJoiSchemas.schema), ctrlAuth.login);
 
