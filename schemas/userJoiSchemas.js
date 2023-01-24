@@ -7,8 +7,13 @@ const schema = Joi.object({
     password: Joi.string().min(6).required(),
 })
 
+const emailSchema = Joi.object({
+    email: Joi.string().pattern(emailRegexp).required(),
+})
+
 const userJoiSchemas = {
     schema,
+    emailSchema,
 }
 
 module.exports = userJoiSchemas;

@@ -1,8 +1,10 @@
 const register = require('./register');
 const login = require('./login');
 const logout = require('./logout');
-const getCurrent = require('./getCurrent')
-const updateAvatar = require('./updateAvatar')
+const getCurrent = require('./getCurrent');
+const updateAvatar = require('./updateAvatar');
+const verify = require('./verify');
+const resendVerifyEmail = require('./resendVerifyEmail');
 
 module.exports = {
     register,
@@ -10,4 +12,6 @@ module.exports = {
     logout,
     getCurrent,
     updateAvatar,
+    verify,
+    resendVerifyEmail,
 }
